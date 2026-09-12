@@ -36,7 +36,11 @@ export function App() {
   const [selectedLookbook, setSelectedLookbook] = useState<LookbookItem | null>(null);
 
   useEffect(() => {
-    const handlePopState = () => setActiveTab(getTabFromPath(window.location.pathname));
+    const handlePopState = () => {
+      setActiveTab(getTabFromPath(window.location.pathname));
+      setSelectedProduct(null);
+      setSelectedLookbook(null);
+    };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
@@ -56,10 +60,28 @@ export function App() {
 
   const handleSelectProduct = (product: Product) => {
     setSelectedProduct(product);
+    window.history.pushState({ modal: 'product' }, '', window.location.href);
   };
 
   const handleSelectLookbook = (item: LookbookItem) => {
     setSelectedLookbook(item);
+    window.history.pushState({ modal: 'lookbook' }, '', window.location.href);
+  };
+
+  const handleCloseProduct = () => {
+    if (window.history.state?.modal === 'product') {
+      window.history.back();
+      return;
+    }
+    setSelectedProduct(null);
+  };
+
+  const handleCloseLookbook = () => {
+    if (window.history.state?.modal === 'lookbook') {
+      window.history.back();
+      return;
+    }
+    setSelectedLookbook(null);
   };
 
   return (
@@ -118,14 +140,14 @@ export function App() {
       {/* Product Quick View & WhatsApp Order Modal */}
       <ProductModal
         product={selectedProduct}
-        onClose={() => setSelectedProduct(null)}
+        onClose={handleCloseProduct}
         onBookInstall={(productName) => handleOpenBooking(`Fitting for ${productName}`)}
       />
 
       {/* Portfolio Lightbox Modal */}
       <LightboxModal
         item={selectedLookbook}
-        onClose={() => setSelectedLookbook(null)}
+        onClose={handleCloseLookbook}
         onBookLook={(lookTitle) => handleOpenBooking(`Style Request: ${lookTitle}`)}
       />
     </div>

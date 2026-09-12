@@ -20,8 +20,14 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, on
   );
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-espresso/80 backdrop-blur-sm overflow-y-auto animate-fadeIn">
-      <div className="relative w-full max-w-4xl max-h-[calc(100dvh-2rem)] bg-ivory rounded-luxury shadow-2xl overflow-y-auto border border-taupe-light my-4 sm:my-8">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-espresso/80 backdrop-blur-sm overflow-y-auto animate-fadeIn"
+      onClick={onClose}
+    >
+      <div
+        className="relative w-full max-w-4xl max-h-[calc(100dvh-2rem)] bg-ivory rounded-luxury shadow-2xl overflow-y-auto border border-taupe-light my-4 sm:my-8"
+        onClick={(event) => event.stopPropagation()}
+      >
         
         {/* Close Button */}
         <button
