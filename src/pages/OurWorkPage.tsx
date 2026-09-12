@@ -113,7 +113,7 @@ export const OurWorkPage: React.FC<OurWorkPageProps> = ({ onSelectLookbook, onOp
               Book Your Appointment
             </button>
             <a
-              href="https://wa.me/2348000000000?text=Hello%20Prevail,%20I%20am%20looking%20at%20your%20portfolio%20and%20want%20to%20request%20a%20look."
+              href="https://wa.me/2349012966554?text=Hello%20Prevail,%20I%20am%20looking%20at%20your%20portfolio%20and%20want%20to%20request%20a%20look."
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3.5 bg-[#25D366] text-white font-bold text-xs tracking-widest-luxury uppercase rounded-luxury hover:brightness-105 transition-all flex items-center gap-2"

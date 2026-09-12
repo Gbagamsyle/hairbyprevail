@@ -42,7 +42,7 @@ export const servicesData: Service[] = [
     subtitle: 'Professional styling for everyday looks, special occasions, and everything in between.',
     tagline: 'Precision installs, red carpet curls, lasting hold.',
     description: 'From glueless lace melts to editorial curls and sleek updos, our in-studio styling sessions ensure your hair stays camera-ready and comfortable all day long.',
-    image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/styling-editorial.jpg',
     details: [
       'Glueless and adhesive lace frontal installations',
       'Precision thermal styling and Hollywood wave sculpting',

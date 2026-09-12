@@ -161,7 +161,7 @@ export const ShopPage: React.FC<ShopPageProps> = ({ onSelectProduct, onOpenBooki
                     View unit
                   </button>
                   <a
-                    href={`https://wa.me/2348000000000?text=${encodeURIComponent(
+                    href={`https://wa.me/2349012966554?text=${encodeURIComponent(
                       `Hello Prevail, I would like to enquire about pricing and availability for the "${prod.name}".`
                     )}`}
                     target="_blank"

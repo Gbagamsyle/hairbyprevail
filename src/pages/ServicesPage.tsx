@@ -95,7 +95,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenBooking }) => 
                     <span>Book {srv.title}</span>
                   </button>
                   <a
-                    href={`https://wa.me/2348000000000?text=${encodeURIComponent(
+                    href={`https://wa.me/2349012966554?text=${encodeURIComponent(
                       `Hello Prevail, I would like to consult about booking the "${srv.title}" service.`
                     )}`}
                     target="_blank"

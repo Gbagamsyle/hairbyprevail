@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { PageTab, Product, LookbookItem } from './types';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -14,12 +14,40 @@ import { OurWorkPage } from './pages/OurWorkPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 
+const tabPaths: Record<PageTab, string> = {
+  home: '/',
+  shop: '/shop',
+  services: '/services',
+  'our-work': '/our-work',
+  about: '/about',
+  contact: '/contact',
+};
+
+const getTabFromPath = (pathname: string): PageTab => {
+  const tab = (Object.keys(tabPaths) as PageTab[]).find((key) => tabPaths[key] === pathname);
+  return tab || 'home';
+};
+
 export function App() {
-  const [activeTab, setActiveTab] = useState<PageTab>('home');
+  const [activeTab, setActiveTab] = useState<PageTab>(() => getTabFromPath(window.location.pathname));
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [bookingService, setBookingService] = useState<string>('');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedLookbook, setSelectedLookbook] = useState<LookbookItem | null>(null);
+
+  useEffect(() => {
+    const handlePopState = () => setActiveTab(getTabFromPath(window.location.pathname));
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const handleSetActiveTab = (tab: PageTab) => {
+    setActiveTab(tab);
+    const nextPath = tabPaths[tab];
+    if (window.location.pathname !== nextPath) {
+      window.history.pushState({}, '', nextPath);
+    }
+  };
 
   const handleOpenBooking = (service?: string) => {
     setBookingService(service || '');
@@ -39,15 +67,15 @@ export function App() {
       {/* Sticky Header */}
       <Navbar
         activeTab={activeTab}
-        setActiveTab={setActiveTab}
+        setActiveTab={handleSetActiveTab}
         onOpenBooking={handleOpenBooking}
       />
 
       {/* Main Content Area with Dynamic Page View */}
-      <main className="flex-1">
+      <main className="flex-1 pb-24 md:pb-0">
         {activeTab === 'home' && (
           <HomePage
-            setActiveTab={setActiveTab}
+            setActiveTab={handleSetActiveTab}
             onOpenBooking={handleOpenBooking}
             onSelectProduct={handleSelectProduct}
             onSelectLookbook={handleSelectLookbook}
@@ -75,7 +103,7 @@ export function App() {
       </main>
 
       {/* Global Footer */}
-      <Footer setActiveTab={setActiveTab} onOpenBooking={() => handleOpenBooking()} />
+      <Footer setActiveTab={handleSetActiveTab} onOpenBooking={() => handleOpenBooking()} />
 
       {/* Persistent Mobile Bottom Action Bar (visible on mobile screens) */}
       <PersistentMobileBar onOpenBooking={() => handleOpenBooking()} />

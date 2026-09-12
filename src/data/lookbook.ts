@@ -61,7 +61,7 @@ export const lookbookData: LookbookItem[] = [
     category: 'Styling',
     description: 'High shine structured ponytail with delicate swooped baby hairs and clean finish.',
     service: 'Studio Hair Styling',
-    image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80',
+    image: '/images/styling-editorial.jpg',
     tags: ['Ponytail', 'Edge Design', 'Sleek']
   },
   {

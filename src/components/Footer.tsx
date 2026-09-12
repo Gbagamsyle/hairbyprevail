@@ -201,7 +201,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveTab, onOpenBooking }) =
                   <span>Instagram</span>
                 </a>
                 <a
-                  href="https://wa.me/2348000000000"
+                  href="https://wa.me/2349012966554"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-3.5 py-2 rounded-luxury bg-[#25D366]/20 text-[#25D366] text-xs font-semibold hover:bg-[#25D366] hover:text-white transition-all flex items-center gap-1.5 border border-[#25D366]/40"

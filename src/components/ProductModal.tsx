@@ -21,7 +21,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, on
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-espresso/80 backdrop-blur-sm overflow-y-auto animate-fadeIn">
-      <div className="relative w-full max-w-4xl bg-ivory rounded-luxury shadow-2xl overflow-hidden border border-taupe-light my-8">
+      <div className="relative w-full max-w-4xl max-h-[calc(100dvh-2rem)] bg-ivory rounded-luxury shadow-2xl overflow-y-auto border border-taupe-light my-4 sm:my-8">
         
         {/* Close Button */}
         <button
@@ -35,8 +35,8 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, on
         <div className="grid grid-cols-1 md:grid-cols-2">
           
           {/* Product Image Gallery Column */}
-          <div className="relative bg-ivory-surface p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-taupe-light/40">
-            <div className="relative w-full aspect-[4/5] max-h-[500px] overflow-hidden rounded-luxury shadow-md">
+          <div className="relative bg-ivory-surface p-4 sm:p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-taupe-light/40">
+            <div className="relative w-full aspect-[4/5] max-h-[40vh] md:max-h-[500px] overflow-hidden rounded-luxury shadow-md">
               <img
                 src={product.image}
                 alt={product.name}
@@ -51,7 +51,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, on
           </div>
 
           {/* Details Column */}
-          <div className="p-6 sm:p-8 flex flex-col justify-between max-h-[85vh] overflow-y-auto">
+          <div className="p-5 sm:p-8 flex flex-col justify-between">
             <div>
               {/* Category & Tagline */}
               <div className="flex items-center gap-2 text-xs font-semibold text-champagne-dark tracking-widest-luxury uppercase mb-2">
@@ -149,7 +149,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, on
             {/* Action Buttons */}
             <div className="mt-8 pt-4 border-t border-taupe-light/50 flex flex-col sm:flex-row gap-3">
               <a
-                href={`https://wa.me/2348000000000?text=${whatsappMessage}`}
+                href={`https://wa.me/2349012966554?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 py-3.5 px-4 bg-[#25D366] text-white text-xs font-bold tracking-widest-luxury uppercase rounded-luxury flex items-center justify-center gap-2 shadow hover:brightness-105 transition-all text-center"

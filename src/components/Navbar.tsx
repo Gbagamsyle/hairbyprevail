@@ -55,13 +55,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenB
             : 'bg-espresso/20 backdrop-blur-sm py-5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo */}
           <button
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3 text-left group focus:outline-none"
+            className="min-w-0 flex items-center gap-2.5 text-left group focus:outline-none"
           >
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center font-serif text-xl border transition-colors shadow-sm ${
+            <div className={`w-9 h-9 shrink-0 rounded-full flex items-center justify-center font-serif text-lg border transition-colors shadow-sm ${
               isHeroTop
                 ? 'bg-ivory text-espresso border-champagne/80 group-hover:border-champagne-bright'
                 : 'bg-espresso text-ivory border-champagne/60 group-hover:border-champagne'
@@ -69,10 +69,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenB
               P
             </div>
             <div className="flex flex-col">
-              <span className={`font-serif text-lg sm:text-xl font-bold tracking-tight leading-none ${isHeroTop ? 'text-ivory' : 'text-espresso'}`}>
+              <span className={`font-serif text-sm sm:text-xl font-bold tracking-tight leading-none truncate ${isHeroTop ? 'text-ivory' : 'text-espresso'}`}>
                 EVERYTHING HAIR
               </span>
-              <span className={`text-[10px] tracking-widest-luxury uppercase font-medium mt-1 ${isHeroTop ? 'text-champagne-soft' : 'text-champagne-dark'}`}>
+              <span className={`hidden sm:block text-[10px] tracking-widest-luxury uppercase font-medium mt-1 ${isHeroTop ? 'text-champagne-soft' : 'text-champagne-dark'}`}>
                 By Prevail Studio
               </span>
             </div>
@@ -104,7 +104,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenB
           {/* Desktop CTA Action Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="https://wa.me/2348000000000?text=Hello%20Prevail,%20I%20would%20like%20to%20enquire%20about%20your%20hair%20services"
+              href="https://wa.me/2349012966554?text=Hello%20Prevail,%20I%20would%20like%20to%20enquire%20about%20your%20hair%20services"
               target="_blank"
               rel="noopener noreferrer"
               className={`p-2.5 rounded hover:text-champagne-dark border transition-all ${isHeroTop ? 'text-ivory border-ivory/40 hover:border-champagne' : 'text-espresso border-taupe-light/60 hover:border-champagne'}`}
@@ -135,7 +135,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenB
       {/* Mobile Menu Drawer Overlay */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-30 md:hidden bg-espresso/60 backdrop-blur-sm animate-fadeIn">
-          <div className="fixed inset-y-0 right-0 max-w-xs w-full bg-ivory shadow-2xl p-6 flex flex-col justify-between border-l border-taupe-light/30">
+          <div className="fixed inset-y-0 right-0 w-[min(88vw,22rem)] bg-ivory shadow-2xl p-5 sm:p-6 flex flex-col justify-between border-l border-taupe-light/30">
             <div>
               {/* Header inside drawer */}
               <div className="flex items-center justify-between pb-6 border-b border-taupe-light/30">
@@ -189,7 +189,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, onOpenB
                 <span>Book Appointment</span>
               </button>
               <a
-                href="https://wa.me/2348000000000?text=Hello%20Prevail,%20I%20would%20like%20to%20enquire%20about%20your%20hair%20services"
+                href="https://wa.me/2349012966554?text=Hello%20Prevail,%20I%20would%20like%20to%20enquire%20about%20your%20hair%20services"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full py-3 bg-[#25D366] text-white text-xs font-semibold tracking-wider uppercase rounded-luxury flex items-center justify-center gap-2 shadow-sm"

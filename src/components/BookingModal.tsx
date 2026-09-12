@@ -48,12 +48,12 @@ export const BookingModal: React.FC<BookingModalProps> = ({
       `• Time: ${formData.preferredTime}\n` +
       `• Notes: ${formData.message || 'Standard inquiry'}`
     );
-    window.open(`https://wa.me/2348000000000?text=${text}`, '_blank');
+    window.open(`https://wa.me/2349012966554?text=${text}`, '_blank');
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-espresso/85 backdrop-blur-sm overflow-y-auto animate-fadeIn">
-      <div className="relative w-full max-w-xl bg-ivory rounded-luxury shadow-2xl overflow-hidden border border-taupe-light my-8">
+      <div className="relative w-full max-w-xl max-h-[calc(100dvh-2rem)] bg-ivory rounded-luxury shadow-2xl overflow-y-auto border border-taupe-light my-4 sm:my-8">
         
         {/* Close Button */}
         <button
@@ -65,7 +65,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
         </button>
 
         {/* Modal Header */}
-        <div className="bg-espresso text-ivory p-6 sm:p-8 relative">
+        <div className="bg-espresso text-ivory p-5 sm:p-8 relative">
           <div className="flex items-center gap-2 text-champagne text-xs font-semibold tracking-widest-luxury uppercase mb-1">
             <span>Studio Appointments & Inquiries</span>
           </div>

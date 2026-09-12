@@ -26,7 +26,7 @@ export const ContactPage: React.FC = () => {
       `• Preferred Date: ${formData.preferredDate || 'Earliest available'}\n` +
       `• Message: ${formData.message || 'General enquiry'}`
     );
-    window.open(`https://wa.me/2348000000000?text=${text}`, '_blank');
+    window.open(`https://wa.me/2349012966554?text=${text}`, '_blank');
   };
 
   return (

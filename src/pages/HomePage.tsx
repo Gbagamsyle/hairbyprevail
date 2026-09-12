@@ -591,7 +591,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <span>Book an Appointment</span>
             </button>
             <a
-              href="https://wa.me/2348000000000?text=Hello%20Prevail,%20I%20am%20ready%20to%20book%20my%20next%20look%20with%20you!"
+              href="https://wa.me/2349012966554?text=Hello%20Prevail,%20I%20am%20ready%20to%20book%20my%20next%20look%20with%20you!"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-4 bg-[#25D366] text-white font-bold text-xs tracking-widest-luxury uppercase rounded-luxury hover:brightness-105 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg"

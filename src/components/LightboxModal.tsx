@@ -71,7 +71,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ item, onClose, onB
           {/* Action Row */}
           <div className="mt-6 pt-5 border-t border-taupe-light/40 flex flex-col sm:flex-row gap-3">
             <a
-              href={`https://wa.me/2348000000000?text=${whatsappMessage}`}
+              href={`https://wa.me/2349012966554?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 py-3 px-4 bg-[#25D366] text-white text-xs font-bold tracking-widest-luxury uppercase rounded-luxury flex items-center justify-center gap-2 shadow hover:brightness-105 transition-all text-center"

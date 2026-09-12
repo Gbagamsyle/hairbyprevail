@@ -11,7 +11,7 @@ export const productsData: Product[] = [
     laceType: 'Undetectable Swiss HD Lace (13x4 / 13x6)',
     availableLengths: ['18 inch', '22 inch', '26 inch', '30 inch'],
     density: '180% to 250% Full Density',
-    price: '₦1,250,000',
+    price: '₦350,000',
     image: '/images/hair-body-wave.jpg',
     badge: 'Bestseller',
     features: [
@@ -31,7 +31,7 @@ export const productsData: Product[] = [
     laceType: 'Invisible HD Melt Lace (5x5 / 13x6)',
     availableLengths: ['20 inch', '24 inch', '28 inch', '32 inch'],
     density: '200% High Density',
-    price: '₦1,350,000',
+    price: '₦350,000',
     image: '/images/hair-straight.jpg',
     badge: 'Luxury Raw',
     features: [
@@ -51,7 +51,7 @@ export const productsData: Product[] = [
     laceType: 'HD Lace Frontal (13x4)',
     availableLengths: ['18 inch', '22 inch', '26 inch'],
     density: '200% to 250% Density',
-    price: '₦1,150,000',
+    price: '₦289,000',
     image: '/images/hair-curly.jpg',
     badge: 'Popular',
     features: [
@@ -71,7 +71,7 @@ export const productsData: Product[] = [
     laceType: 'HD Transparent Lace (13x6)',
     availableLengths: ['22 inch', '26 inch', '28 inch'],
     density: '200% Density',
-    price: '₦1,450,000',
+    price: '₦320,000',
     image: '/images/perruque-lace-front.jpg',
     badge: 'Custom Tone',
     features: [
@@ -91,8 +91,8 @@ export const productsData: Product[] = [
     laceType: 'HD Melt Lace (13x4)',
     availableLengths: ['20 inch', '24 inch', '28 inch'],
     density: '180% Density',
-    price: '₦1,300,000',
-    image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80',
+    price: '₦335,000',
+    image: '/images/espresso-burgundy-wave.jpg',
     features: [
       'Deep jewel tone formulated for maximum luster',
       'Silky touch with natural body movement',
@@ -110,8 +110,8 @@ export const productsData: Product[] = [
     laceType: 'HD Lace 5x5 Closure',
     availableLengths: ['20 inch', '24 inch', '28 inch'],
     density: '200% Density',
-    price: '₦1,100,000',
-    image: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1200&q=80',
+    price: '₦300,000',
+    image: '/images/bohemian-loose-deep.jpg',
     features: [
       'Featherweight feel with maximum fullness',
       'No frizz formula when styled with curl cream',
@@ -129,7 +129,7 @@ export const productsData: Product[] = [
     laceType: 'HD Transparent Lace (13x6)',
     availableLengths: ['18 inch', '22 inch', '26 inch'],
     density: '180% Density',
-    price: '₦1,050,000',
+    price: '₦350,000',
     image: '/images/hairone.jpg',
     badge: 'New Arrival',
     features: [
@@ -149,7 +149,7 @@ export const productsData: Product[] = [
     laceType: 'HD Lace Frontal (13x4)',
     availableLengths: ['16 inch', '20 inch', '24 inch'],
     density: '220% Density',
-    price: '₦1,200,000',
+    price: '₦200,000',
     image: '/images/hairtwo.jpg',
     badge: 'New Arrival',
     features: [
