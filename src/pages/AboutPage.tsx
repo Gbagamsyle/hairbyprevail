@@ -17,7 +17,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenBooking }) => {
           <div className="lg:col-span-5 space-y-6">
             <div className="relative rounded-luxury overflow-hidden aspect-[4/5] shadow-2xl border border-taupe-light/70 max-w-md mx-auto">
               <img
-                src="/images/hero-editorial.jpg"
+                src="/images/prevail.jpg"
                 alt="Prevail, Founder of Everything Hair"
                 className="w-full h-full object-cover"
               />
