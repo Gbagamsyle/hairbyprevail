@@ -165,8 +165,8 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, on
               </a>
               <button
                 onClick={() => {
-                  onClose();
                   onBookInstall(product.name);
+                  onClose();
                 }}
                 className="py-3.5 px-5 bg-espresso text-ivory text-xs font-semibold tracking-widest-luxury uppercase rounded-luxury hover:bg-espresso-rich transition-all flex items-center justify-center gap-2 text-center border border-espresso"
               >

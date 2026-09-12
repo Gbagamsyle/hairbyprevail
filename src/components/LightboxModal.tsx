@@ -87,8 +87,8 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ item, onClose, onB
             </a>
             <button
               onClick={() => {
-                onClose();
                 onBookLook(item.title);
+                onClose();
               }}
               className="py-3 px-6 bg-espresso text-ivory text-xs font-semibold tracking-widest-luxury uppercase rounded-luxury hover:bg-espresso-rich transition-all flex items-center justify-center gap-2 border border-espresso"
             >

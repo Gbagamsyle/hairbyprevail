@@ -38,6 +38,7 @@ export function App() {
   useEffect(() => {
     const handlePopState = () => {
       setActiveTab(getTabFromPath(window.location.pathname));
+      setIsBookingOpen(false);
       setSelectedProduct(null);
       setSelectedLookbook(null);
     };
@@ -56,6 +57,17 @@ export function App() {
   const handleOpenBooking = (service?: string) => {
     setBookingService(service || '');
     setIsBookingOpen(true);
+    if (window.history.state?.modal !== 'booking') {
+      window.history.pushState({ modal: 'booking' }, '', window.location.href);
+    }
+  };
+
+  const handleCloseBooking = () => {
+    if (window.history.state?.modal === 'booking') {
+      window.history.back();
+      return;
+    }
+    setIsBookingOpen(false);
   };
 
   const handleSelectProduct = (product: Product) => {
@@ -133,7 +145,7 @@ export function App() {
       {/* Interactive Booking & Inquiry Modal */}
       <BookingModal
         isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
+        onClose={handleCloseBooking}
         initialService={bookingService}
       />
 
