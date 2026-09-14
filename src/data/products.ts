@@ -12,7 +12,7 @@ export const productsData: Product[] = [
     availableLengths: ['18 inch', '22 inch', '26 inch', '30 inch'],
     density: '180% to 250% Full Density',
     price: '₦350,000',
-    image: '/images/hair-body-wave.jpg',
+    image: '/images/wig.jpg',
     badge: 'Bestseller',
     features: [
       'Natural deep luster with zero synthetic shine',
@@ -32,7 +32,7 @@ export const productsData: Product[] = [
     availableLengths: ['20 inch', '24 inch', '28 inch', '32 inch'],
     density: '200% High Density',
     price: '₦350,000',
-    image: '/images/hair-straight.jpg',
+    image: '/images/bone-straight.jpg',
     badge: 'Luxury Raw',
     features: [
       'Mirror shine without heavy product build-up',
@@ -52,7 +52,7 @@ export const productsData: Product[] = [
     availableLengths: ['18 inch', '22 inch', '26 inch'],
     density: '200% to 250% Density',
     price: '₦289,000',
-    image: '/images/hair-curly.jpg',
+    image: '/images/curls.jpg',
     badge: 'Popular',
     features: [
       'Retains curl definition with simple water misting',
